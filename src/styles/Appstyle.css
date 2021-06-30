@@ -1,0 +1,194 @@
+:root{
+	--bigFont:sans-serif;
+	--mainFont:sans-serif;
+	--mainCol: white;
+	--accentCol: #00F0C5;
+	--dangerCol:red;
+	--darkCol:hsla(360, 1%, 10%, 1);
+}
+
+.App{
+	background-color: black;
+	display: block;
+	outline: 5px black solid;
+	outline-offset: 10px;
+	padding:10px;
+}
+
+.header{
+	position: relative;
+	padding:2rem 0;
+	margin:0;
+}
+
+h1{
+	display: inline-block;
+	font-family: var(--bigFont);
+	color:var(--mainCol);
+	padding:0;
+	margin:0;
+}
+
+.icon{
+	display: inline-block;
+	color: var(--mainCol);
+	font-size: 2rem;
+	position: absolute;
+	right:10%;
+
+	transition: 200ms linear;
+}
+
+.icon:hover{
+	transform:scale(1.2);
+	color:var(--accentCol);
+}
+
+button{
+	border:3px black solid;
+	height:2em;
+	min-width: 1.5em;
+	font-size: 1rem;
+}
+
+button:hover{
+	transform: scale(1.05);
+}
+
+button:active{
+	transform: scale(0.95);
+}
+
+.task{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: hsla(360, 0%, 10%, 1);
+	margin: 1em 0.3em;
+	min-width: 50vw;
+	padding: 1rem 2rem;
+
+	opacity: 0.5;
+
+	transition: 100ms linear;
+}
+
+.task:hover{
+	outline:2px solid var(--accentCol);
+	opacity: 0.8;
+	transform: scale(1.01);
+}
+
+.text{
+	display: flex;
+	flex-direction: column;
+	width:100%;
+}
+
+.taskTitle{
+	color:white;
+	display: block;
+	font-family: var(--mainFont);
+}
+
+.taskDue{
+	color:grey;
+	display: block;
+}
+
+.deleteBtn{
+	color:var(--mainCol);
+	font-size: 1.5em;
+	transition: 100ms linear;
+}
+
+.deleteBtn:hover{
+	transform:scale(1.1);
+	color:var(--dangerCol);
+}
+
+.no-task{
+	color:white;
+	padding:2rem;
+	font-family: var(--mainFont);
+	font-size: 2rem;
+}
+
+.addTask{
+	color:var(--mainCol);
+	background-color: var(--darkCol);
+	outline:var(--accentCol) 2px solid;
+	padding:2rem 0;
+	display: flex;
+	flex-direction: column;
+	gap:2rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.formElement{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	position: relative;
+	padding: 0 2rem;
+}
+
+.formElement > label{
+	font-weight: 800;
+	font-family: var(--mainFont);
+	font-size: 1.2rem;
+}
+
+.submitButton{
+	display: block;
+	min-width:50%;
+	min-height: 2rem;
+	background-color: var(--mainCol);
+	text-decoration: none;
+	border: none;
+	font-family: var(--mainFont);
+	font-size: 1rem;
+	font-weight: 800;
+
+	transition: 200ms linear;
+}
+
+.submitButton:hover{
+	background-color: var(--accentCol);
+}
+
+/*
+.allTasks{
+	max-height: 50vh;
+	overflow-y: scroll;
+	overflow-x:scroll;
+}
+*/
+
+.inText{
+	background-color: var(--darkCol);
+	border:2px var(--mainCol) solid;
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	padding: 0.5rem 1rem;
+	color:white;
+	font-size: 1.5rem;
+}
+
+.inText:hover, .inText:active, .inText:focus{
+	border:2px var(--accentCol) solid;
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	outline:none;
+	color:var(--accentCol);
+}
+
+.inCheck{
+	display: flex;
+}
